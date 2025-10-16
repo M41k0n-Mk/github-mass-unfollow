@@ -127,7 +127,7 @@ if ! command -v jq &> /dev/null; then
 fi
 
 echo -e "${BLUE}🔐 Authenticating with GitHub...${NC}"
-echo "$GITHUB_TOKEN" | gh auth login --with-token 2>/dev/null
+echo "$GITHUB_TOKEN" | gh auth login --with-token 2>/dev/null || true
 
 # Get current user info
 echo -e "${BLUE}👤 Getting user information...${NC}"
